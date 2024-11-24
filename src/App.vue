@@ -1,8 +1,18 @@
 <template>
-	<section></section>
+	<section>
+		<ProfileComponent />
+		<ProjectsComponent />
+		<AboutComponent />
+		<ContactComponent />
+	</section>
 </template>
 
-<script setup></script>
+<script setup>
+import ProfileComponent from './components/ProfileComponent.vue';
+import ProjectsComponent from './components/ProjectsComponent.vue';
+import AboutComponent from './components/AboutComponent.vue';
+import ContactComponent from './components/ContactComponent.vue';
+</script>
 
 <style lang="scss">
 @use './assets/sass/reset';
