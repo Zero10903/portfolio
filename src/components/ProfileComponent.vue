@@ -1,11 +1,13 @@
 <template>
 	<section class="profile">
-		<img
-			src="../assets/images/profile_picture.jpg"
-			alt="profile picture"
-			class="profile__picture" />
-		<h1 class="profile__name">Alejandro Bustos</h1>
-		<h2 class="profile__main-skills">Game and web developer.</h2>
+		<article class="profile__user">
+			<img
+				src="../assets/images/profile_picture.jpg"
+				alt="profile picture"
+				class="profile__picture" />
+			<h1 class="profile__name">Alejandro Bustos</h1>
+			<h2 class="profile__main-skills">Game and web developer.</h2>
+		</article>
 		<EmailComponent />
 		<CVComponent />
 	</section>
@@ -24,9 +26,18 @@ import CVComponent from './ProfileComponents/CVComponent.vue';
 	padding: 1rem;
 	@include layout.flexCenter(column, 1.2rem);
 
+	&__user {
+		padding: 1rem;
+		@include layout.flexCenter(column, 1rem);
+
+		background-color: $darker-color;
+
+		@include layout.rounded($rounded);
+		filter: drop-shadow($dark-shadow);
+	}
 	&__picture {
 		@include layout.square(clamp(10rem, 20vw, 20rem), 50%);
-		filter: drop-shadow(1rem 1rem 1rem $dark-shadow);
+		filter: drop-shadow($dark-shadow);
 	}
 	&__main-skills {
 		text-align: center;
