@@ -2,6 +2,7 @@
 	<section class="container">
 		<ProfileComponent />
 		<AboutComponent />
+		<SkillsComponent />
 		<ProjectsComponent />
 		<ContactComponent />
 	</section>
@@ -10,6 +11,7 @@
 <script setup>
 import ProfileComponent from './components/ProfileComponent.vue';
 import AboutComponent from './components/AboutComponent.vue';
+import SkillsComponent from './components/SkillsComponent.vue';
 import ProjectsComponent from './components/ProjectsComponent.vue';
 import ContactComponent from './components/ContactComponent.vue';
 </script>
