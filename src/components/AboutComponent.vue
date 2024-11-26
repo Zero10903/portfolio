@@ -30,7 +30,7 @@
 
 	background-color: $darker-color;
 	@include layout.rounded($rounded);
-	filter: drop-shadow(0.5rem 0.5rem 0.5rem $dark-shadow);
+	filter: drop-shadow($dark-shadow);
 
 	&__description {
 		@include layout.flexCenter(column, 0.5rem);

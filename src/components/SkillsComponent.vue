@@ -142,7 +142,7 @@
 	width: clamp(10rem, 90%, 30rem);
 
 	background-color: $darker-color;
-	filter: drop-shadow(0.5rem 0.5rem 0.5rem $dark-shadow);
+	filter: drop-shadow($dark-shadow);
 	@include layout.rounded($rounded);
 
 	&__category {
@@ -156,7 +156,7 @@
 		position: relative;
 		fill: $accent-color;
 		@include layout.square(3rem);
-		filter: drop-shadow(0.2rem 0.2rem 0.2rem $dark-shadow);
+		filter: drop-shadow($dark-shadow);
 	}
 }
 </style>

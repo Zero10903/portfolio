@@ -35,13 +35,13 @@ const downloadCV = () => {
 
 	background-color: $darker-color;
 
-	filter: drop-shadow(0.5rem 0.5rem 0.5rem $dark-shadow);
+	filter: drop-shadow($dark-shadow);
 
 	transition: $transition-time filter, $transition-time background-color;
 
 	&:hover {
 		background-color: $accent-color;
-		filter: drop-shadow(0rem 0rem 0.5rem $accent-shadow);
+		filter: drop-shadow($accent-shadow);
 
 		& > .cv__text {
 			color: $darker-color;
@@ -52,6 +52,7 @@ const downloadCV = () => {
 	}
 
 	&__text {
+		font-weight: 600;
 		color: $accent-color;
 		transition: $transition-time color;
 	}
