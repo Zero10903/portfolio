@@ -22,7 +22,7 @@ import CVComponent from './ProfileComponents/CVComponent.vue';
 
 .profile {
 	padding: 1rem;
-	@include layout.flexCenter(column, 1.5rem);
+	@include layout.flexCenter(column, 1.2rem);
 
 	&__picture {
 		@include layout.square(clamp(10rem, 20vw, 20rem), 50%);
