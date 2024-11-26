@@ -26,11 +26,10 @@
 
 .about {
 	padding: 1rem 0.5rem;
-	max-width: clamp(10rem, 90%, 30rem);
+	width: clamp(10rem, 90%, 30rem);
 
 	background-color: $darker-color;
-	border-radius: 0.5rem;
-
+	@include layout.rounded($rounded);
 	filter: drop-shadow(0.5rem 0.5rem 0.5rem $dark-shadow);
 
 	&__title {
