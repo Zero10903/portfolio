@@ -145,8 +145,12 @@
 	filter: drop-shadow(0.5rem 0.5rem 0.5rem $dark-shadow);
 	@include layout.rounded($rounded);
 
+	&__category {
+		padding: 0.5rem 1rem 0.2rem;
+	}
 	&__container {
-		@include layout.flexCenter(row, 0.5rem);
+		padding-inline: 1rem;
+		@include layout.flex(row, wrap, start, center, 0.5rem);
 	}
 	&__icon {
 		position: relative;

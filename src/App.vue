@@ -37,6 +37,10 @@ h2 {
 	font-weight: 100;
 	font-style: italic;
 }
+h1,
+h2 {
+	padding-bottom: 0.5rem;
+}
 p {
 	font-size: 1rem;
 	font-family: 'Roboto', sans-serif;

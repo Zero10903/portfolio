@@ -32,9 +32,6 @@
 	@include layout.rounded($rounded);
 	filter: drop-shadow(0.5rem 0.5rem 0.5rem $dark-shadow);
 
-	&__title {
-		padding-bottom: 0.5rem;
-	}
 	&__description {
 		@include layout.flexCenter(column, 0.5rem);
 	}
