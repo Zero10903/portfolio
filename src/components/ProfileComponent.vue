@@ -24,16 +24,18 @@ import CVComponent from './ProfileComponents/CVComponent.vue';
 
 .profile {
 	padding: 1rem;
+	width: clamp(10rem, 90%, 30rem);
+
 	@include layout.flexCenter(column, 1.2rem);
+
+	background-color: $darker-color;
+
+	@include layout.rounded($rounded);
+	filter: drop-shadow($dark-shadow);
 
 	&__user {
 		padding: 1rem;
 		@include layout.flexCenter(column, 1rem);
-
-		background-color: $darker-color;
-
-		@include layout.rounded($rounded);
-		filter: drop-shadow($dark-shadow);
 	}
 	&__picture {
 		@include layout.square(clamp(10rem, 20vw, 20rem), 50%);

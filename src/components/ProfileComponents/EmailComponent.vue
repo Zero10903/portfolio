@@ -58,19 +58,18 @@ const copyToClipboard = () => {
 	align-items: center;
 	gap: 0.5rem;
 
-	background-color: $darker-color;
-
+	background-color: $dark-color;
 	filter: drop-shadow($dark-shadow);
 
 	&__pop {
 		padding: 0.25rem 0.5rem;
 		position: absolute;
-		top: -1rem;
+		top: -1.3rem;
 		left: 50%;
 		transform: translateX(-50%);
 
 		color: $accent-color;
-		background-color: $darker-color;
+		background-color: $dark-color;
 		border-radius: 0.5rem;
 
 		opacity: 0;
@@ -81,6 +80,7 @@ const copyToClipboard = () => {
 	}
 	&__text {
 		grid-area: email;
+		font-size: clamp(0.8rem, 4dvw, 1rem);
 	}
 	&__copy {
 		cursor: pointer;

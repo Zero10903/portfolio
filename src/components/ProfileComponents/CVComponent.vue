@@ -33,7 +33,7 @@ const downloadCV = () => {
 	align-items: center;
 	gap: 0.5rem;
 
-	background-color: $darker-color;
+	background-color: $dark-color;
 
 	filter: drop-shadow($dark-shadow);
 
@@ -44,10 +44,10 @@ const downloadCV = () => {
 		filter: drop-shadow($accent-shadow);
 
 		& > .cv__text {
-			color: $darker-color;
+			color: $dark-color;
 		}
 		& > .cv__download {
-			fill: $darker-color;
+			fill: $dark-color;
 		}
 	}
 
