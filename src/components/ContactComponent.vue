@@ -1,5 +1,5 @@
 <template>
-	<footer class="contact">
+	<footer class="contact card">
 		<h2 class="contact__title">Contact me</h2>
 		<section class="contact__icons">
 			<a href="https://github.com/Zero10903">
@@ -41,11 +41,7 @@ import IconComponent from './UtilityComponents/IconComponent.vue';
 @use '@/assets/sass/config' as *;
 
 .contact {
-	width: clamp(10rem, 90%, 30rem);
-	padding: 1rem 0.5rem;
 	margin-bottom: 1rem;
-	background-color: $darker-color;
-	filter: drop-shadow($dark-shadow);
 
 	&__icons {
 		@include layout.flex(row, wrap, start, center, 0.5rem);

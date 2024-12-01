@@ -1,5 +1,5 @@
 <template>
-	<section class="profile">
+	<section class="profile card">
 		<article class="profile__user">
 			<img
 				src="../assets/images/profile_picture.jpg"
@@ -23,15 +23,8 @@ import CVComponent from './ProfileComponents/CVComponent.vue';
 @use '../assets/sass/config' as *;
 
 .profile {
-	padding: 1rem;
-	width: clamp(10rem, 90%, 30rem);
-
+	margin-top: 1rem;
 	@include layout.flexCenter(column, 1.2rem);
-
-	background-color: $darker-color;
-
-	@include layout.rounded($rounded);
-	filter: drop-shadow($dark-shadow);
 
 	&__user {
 		padding: 1rem;

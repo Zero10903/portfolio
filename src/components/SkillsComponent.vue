@@ -1,5 +1,5 @@
 <template>
-	<section class="skills">
+	<section class="skills card">
 		<h2 class="skills__title">Skills and tools</h2>
 		<ul class="skills__list">
 			<li class="skills__category">Web Development</li>
@@ -100,13 +100,6 @@ import IconComponent from './UtilityComponents/IconComponent.vue';
 @use '../assets/sass/config' as *;
 
 .skills {
-	padding: 1rem 0.5rem;
-	width: clamp(10rem, 90%, 30rem);
-
-	background-color: $darker-color;
-	filter: drop-shadow($dark-shadow);
-	@include layout.rounded($rounded);
-
 	&__category {
 		padding: 0.5rem 1rem 0.2rem;
 	}

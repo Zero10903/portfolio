@@ -1,5 +1,5 @@
 <template>
-	<section class="about">
+	<section class="about card">
 		<h2 class="about__title">About me</h2>
 		<article class="about__description">
 			<p>
@@ -25,13 +25,6 @@
 @use '../assets/sass/config' as *;
 
 .about {
-	padding: 1rem 0.5rem;
-	width: clamp(10rem, 90%, 30rem);
-
-	background-color: $darker-color;
-	@include layout.rounded($rounded);
-	filter: drop-shadow($dark-shadow);
-
 	&__description {
 		@include layout.flexCenter(column, 0.5rem);
 	}
