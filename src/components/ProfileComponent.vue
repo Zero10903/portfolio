@@ -27,7 +27,6 @@ import CVComponent from './ProfileComponents/CVComponent.vue';
 	@include layout.flexCenter(column, 1.2rem);
 
 	&__user {
-		padding: 1rem;
 		@include layout.flexCenter(column, 1rem);
 	}
 	&__picture {
