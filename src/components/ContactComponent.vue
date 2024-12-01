@@ -41,7 +41,7 @@ import IconComponent from './UtilityComponents/IconComponent.vue';
 @use '@/assets/sass/config' as *;
 
 .contact {
-	width: clamp(20rem, 50%, 30rem);
+	width: clamp(10rem, 90%, 30rem);
 	padding: 1rem 0.5rem;
 	margin-bottom: 1rem;
 	background-color: $darker-color;
