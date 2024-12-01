@@ -11,7 +11,7 @@
 @use '@/assets/sass/config' as *;
 
 .icon {
-	@include layout.square(2.5rem);
+	@include layout.square(2rem);
 	filter: drop-shadow($dark-shadow);
 	fill: $accent-color;
 
