@@ -56,7 +56,7 @@ p {
 	background-color: $accent-color;
 }
 .card {
-	width: clamp(10rem, 90%, 30rem);
+	width: clamp(10rem, 90%, 40rem);
 	padding: 1rem 0.5rem;
 
 	background-color: $darker-color;
