@@ -22,7 +22,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import IconComponent from '../UtilityComponents/IconComponent.vue';
+import IconComponent from '../Utility/IconComponent.vue';
 
 const email = ref('sam.alejandro.bustos@gmail.com');
 const isCopied = ref(false);

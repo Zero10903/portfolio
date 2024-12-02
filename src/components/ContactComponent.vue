@@ -39,7 +39,7 @@
 </template>
 
 <script setup>
-import IconComponent from './UtilityComponents/IconComponent.vue';
+import IconComponent from './Utility/IconComponent.vue';
 </script>
 
 <style lang="scss" scoped>

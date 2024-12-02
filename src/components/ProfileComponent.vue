@@ -14,8 +14,8 @@
 </template>
 
 <script setup>
-import EmailComponent from './ProfileComponents/EmailComponent.vue';
-import CVComponent from './ProfileComponents/CVComponent.vue';
+import EmailComponent from './Profile/EmailComponent.vue';
+import CVComponent from './Profile/CVComponent.vue';
 </script>
 
 <style lang="scss" scoped>
