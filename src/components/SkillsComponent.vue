@@ -91,6 +91,14 @@
 	&__container {
 		padding-inline: 1rem;
 		@include layout.flex(row, wrap, start, center, 0.5rem);
+
+		// ? Scroll animation
+		view-timeline-name: --skillScrollReveal;
+		view-timeline-axis: block;
+		animation-timeline: --skillScrollReveal;
+		animation-range: entry 25% cover 30%;
+		animation-fill-mode: both;
+		animation-name: right;
 	}
 	&__icon {
 		@include layout.square(3rem);
@@ -99,6 +107,17 @@
 			border-radius: 50%;
 			background-color: $light-color;
 		}
+	}
+}
+
+@keyframes right {
+	from {
+		opacity: 0;
+		translate: 10%;
+	}
+	to {
+		opacity: 1;
+		translate: 0%;
 	}
 }
 </style>
