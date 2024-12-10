@@ -54,8 +54,7 @@ npm run dev
 
 ## Demo
 
-> [!IMPORTANT]
-> Demo will be released when the project finishes.
+[Portfolio link.](https://zero10903.github.io/portfolio/)
 
 ## License
 
