@@ -1,7 +1,41 @@
 <template>
-	<section></section>
+	<section>
+		<h1 class="accent-color">Test</h1>
+	</section>
 </template>
 
 <script lang="ts" setup></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use '@/assets/sass/reset';
+@use '@/assets/sass/layout';
+@use '@/assets/sass/config' as *;
+
+body {
+	color: $light-color;
+	background-color: $dark-color;
+}
+h1 {
+	font-size: 1.5rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
+}
+h2 {
+	font-size: 1.25rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 100;
+	font-style: italic;
+}
+h1,
+h2 {
+	padding-bottom: 0.5rem;
+}
+p {
+	font-size: 1rem;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+.accent-color {
+	color: $accent-color;
+}
+</style>
