@@ -66,7 +66,8 @@ onBeforeUnmount(() => {
 
 .navbar {
 	padding: 1rem;
-	position: relative;
+	position: sticky;
+	top: 0;
 
 	background-color: $darker-color;
 
