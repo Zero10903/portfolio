@@ -1,12 +1,14 @@
 <template>
 	<section>
-		<h1 class="accent-color">Test</h1>
+		<NavbarComponent />
 	</section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import NavbarComponent from '@/components/NavbarComponent.vue';
+</script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use '@/assets/sass/reset';
 @use '@/assets/sass/layout';
 @use '@/assets/sass/config' as *;

@@ -1,6 +1,18 @@
+@use 'sass:color';
+
 // COLORS
 $dark-color: #141414;
+$darker-color: #090909;
 $light-color: #f0f0f0;
 $accent-color: #9932cc;
+$dark-accent-color: color.adjust($accent-color, $lightness: -20%);
 
-//
+// SHADOWS
+$dark-shadow: 0.2rem 0.2rem 0.2rem $darker-color;
+
+// TRANSITIONS
+$transition-time: 0.3s;
+
+// RESPONSIVE
+$tablet: 768px;
+$desktop: 1024px;
