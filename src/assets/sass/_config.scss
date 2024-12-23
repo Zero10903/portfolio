@@ -9,6 +9,10 @@ $dark-accent-color: color.adjust($accent-color, $lightness: -20%);
 
 // SHADOWS
 $dark-shadow: 0.2rem 0.2rem 0.2rem $darker-color;
+$accent-shadow: 0.2rem 0.2rem 0.2rem $dark-accent-color;
+
+// BORDERS
+$rounded: 0.5rem;
 
 // TRANSITIONS
 $transition-time: 0.3s;
