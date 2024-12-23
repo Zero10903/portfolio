@@ -176,6 +176,7 @@ onBeforeUnmount(() => {
 			position: relative;
 
 			animation: none;
+			background-color: transparent;
 
 			@include layout.flexCenter(row, 0.5rem);
 		}
