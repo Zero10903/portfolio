@@ -14,6 +14,7 @@ import NavbarComponent from '@/components/NavbarComponent.vue';
 @use '@/assets/sass/reset';
 @use '@/assets/sass/layout';
 @use '@/assets/sass/config' as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
 	color: $light-color;
