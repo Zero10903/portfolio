@@ -1,5 +1,6 @@
 <template>
 	<section class="hero">
+		<ParticlesComponent />
 		<article class="hero__content">
 			<div class="hero__text">
 				<h1 class="hero__title">
@@ -34,6 +35,7 @@
 
 <script lang="ts" setup>
 import { onMounted, ref, type Ref } from 'vue';
+import ParticlesComponent from '@/components/utility/ParticlesComponent.vue';
 
 // Define the active state of the image
 const isActive: Ref<boolean> = ref(true);
@@ -57,6 +59,7 @@ onMounted(() => {
 .hero {
 	height: 90dvh;
 	padding: 1rem;
+	position: relative;
 
 	@include layout.flexCenter(column, 1rem);
 
