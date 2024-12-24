@@ -16,7 +16,7 @@ import HeroComponent from '@/components/HeroComponent.vue';
 		position: fixed;
 		inset: 0;
 		z-index: -1;
-		background: url('@/assets/images/background.png') no-repeat center
+		background: url('@/assets/images/background.webp') no-repeat center
 			center/cover;
 	}
 }
