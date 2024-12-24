@@ -38,7 +38,7 @@ h2 {
 p {
 	font-size: 1rem;
 	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 }
 .accent-color {
 	color: $accent-color;

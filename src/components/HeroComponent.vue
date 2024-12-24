@@ -11,7 +11,9 @@
 					Are you ready to get your next website or videogame?
 				</p>
 			</div>
-			<button class="btn">Contact</button>
+			<a href="mailto:sam.alejandro.bustos@gmail.com">
+				<BtnComponent size="md">Contact me</BtnComponent>
+			</a>
 		</article>
 		<article class="hero__images">
 			<transition>
@@ -71,23 +73,6 @@ onMounted(() => {
 	}
 	&__image {
 		display: none;
-	}
-}
-
-// Placeholder button
-.btn {
-	padding: 1rem 1.5rem;
-	border-radius: $rounded;
-
-	color: $accent-color;
-	background-color: $dark-color;
-	filter: drop-shadow($dark-shadow);
-
-	transition: $transition-time all;
-	&:hover {
-		color: $dark-color;
-		background-color: $accent-color;
-		filter: drop-shadow($accent-shadow);
 	}
 }
 
