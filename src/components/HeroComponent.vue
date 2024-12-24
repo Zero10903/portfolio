@@ -104,7 +104,7 @@ onMounted(() => {
 @keyframes slide-in {
 	from {
 		opacity: 0;
-		transform: translateX(-100%);
+		transform: translateX(-30%);
 	}
 	to {
 		opacity: 1;
@@ -125,7 +125,7 @@ onMounted(() => {
 	100% {
 		opacity: 0;
 		scale: 0.5;
-		transform: translateX(-100%);
+		transform: translateX(-30%);
 	}
 }
 </style>
