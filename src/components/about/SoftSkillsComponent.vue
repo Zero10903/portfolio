@@ -11,12 +11,14 @@
 				{{ skill.name }}
 			</BtnComponent>
 		</ul>
-		<ModalComponent
-			v-if="selectedSkill"
-			:title="selectedSkill.name"
-			:description="selectedSkill.description"
-			:isVisible="isModalVisible"
-			@close="closeModal" />
+		<transition>
+			<ModalComponent
+				v-if="selectedSkill"
+				:title="selectedSkill.name"
+				:description="selectedSkill.description"
+				:isVisible="isModalVisible"
+				@close="closeModal" />
+		</transition>
 	</section>
 </template>
 
@@ -49,6 +51,22 @@ const closeModal: () => void = () => {
 
 	&__list {
 		@include layout.flex(row, wrap, center, center, 1rem);
+	}
+}
+
+.v-enter-active {
+	animation: $transition-modal toggleModal;
+}
+.v-leave-active {
+	animation: $transition-modal toggleModal reverse;
+}
+
+@keyframes toggleModal {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
 </style>
