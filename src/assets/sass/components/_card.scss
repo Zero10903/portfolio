@@ -1,0 +1,7 @@
+@use '../layout';
+
+.card {
+	width: clamp(10rem, 90%, 20rem);
+	padding: 0.5rem 0rem;
+	@include layout.flexCenter(column, 0.5rem);
+}

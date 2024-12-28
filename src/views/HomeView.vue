@@ -2,11 +2,13 @@
 	<section class="home">
 		<article class="home__background"></article>
 		<HeroComponent />
+		<AboutComponent />
 	</section>
 </template>
 
 <script lang="ts" setup>
 import HeroComponent from '@/components/HeroComponent.vue';
+import AboutComponent from '@/components/AboutComponent.vue';
 </script>
 
 <style lang="scss" scoped>
