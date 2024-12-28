@@ -57,7 +57,7 @@ onMounted(() => {
 @use '@/assets/sass/config' as *;
 
 .hero {
-	height: 90dvh;
+	height: 95dvh;
 	padding: 1rem;
 	position: relative;
 
