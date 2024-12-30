@@ -29,26 +29,22 @@ import ProjectComponent from '@/components/projects/ProjectComponent.vue';
 @use '@/assets/sass/config' as *;
 
 .projects {
+	background-color: $dark-color;
+
 	&__header {
-		mix-blend-mode: multiply;
-		background-color: black;
 		padding: 2rem;
-		@include layout.flex(row, nowrap, space-between, center, 1rem);
-	}
-	&__title {
-		font-weight: 700;
-		text-shadow: $accent-shadow;
+		@include layout.flex(row, nowrap, center, center, 1rem);
 	}
 	&__list {
-		background-image: linear-gradient(
-			to bottom,
-			black,
-			$dark-color,
-			$dark-color,
-			$dark-color,
-			$dark-color
-		);
 		@include layout.flex(row, wrap, center, start, 1rem);
+	}
+}
+
+@media (width >= $desktop) {
+	.projects {
+		&__header {
+			justify-content: start;
+		}
 	}
 }
 </style>
