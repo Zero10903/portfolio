@@ -3,12 +3,14 @@
 		<article class="home__background"></article>
 		<HeroComponent />
 		<AboutComponent />
+		<ProjectsComponent />
 	</section>
 </template>
 
 <script lang="ts" setup>
-import HeroComponent from '@/components/HeroComponent.vue';
 import AboutComponent from '@/components/AboutComponent.vue';
+import HeroComponent from '@/components/HeroComponent.vue';
+import ProjectsComponent from '@/components/ProjectsComponent.vue';
 </script>
 
 <style lang="scss" scoped>
