@@ -2,12 +2,14 @@
 	<section>
 		<NavbarComponent />
 		<router-view></router-view>
+		<FooterComponent />
 	</section>
 </template>
 
 <script lang="ts" setup>
 import { RouterView } from 'vue-router';
 import NavbarComponent from '@/components/NavbarComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 </script>
 
 <style lang="scss">
