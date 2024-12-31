@@ -1,6 +1,7 @@
 <template>
 	<section>
 		<NavbarComponent />
+		<article class="background"></article>
 		<router-view></router-view>
 		<FooterComponent />
 	</section>
@@ -44,5 +45,13 @@ p {
 }
 .accent-color {
 	color: $accent-color;
+}
+.background {
+	height: 100dvh;
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background: url('@/assets/images/background.webp') no-repeat center
+		center/cover;
 }
 </style>
