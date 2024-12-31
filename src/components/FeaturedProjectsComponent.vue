@@ -8,7 +8,7 @@
 		</article>
 		<ul class="projects__list">
 			<ProjectComponent
-				v-for="project in projectsData"
+				v-for="project in featuredProjectsData"
 				:key="project.id"
 				:img="project.image"
 				:techs="project.techs"
@@ -20,7 +20,7 @@
 
 <script lang="ts" setup>
 import { RouterLink } from 'vue-router';
-import { projectsData } from '@/data/projectsData';
+import { featuredProjectsData } from '@/data/featuredProjectsData';
 import ProjectComponent from '@/components/projects/ProjectComponent.vue';
 </script>
 

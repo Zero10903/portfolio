@@ -2,7 +2,7 @@
 	<section class="home">
 		<HeroComponent />
 		<AboutComponent />
-		<ProjectsComponent />
+		<FeaturedProjectsComponent />
 		<CTAComponent />
 	</section>
 </template>
@@ -11,7 +11,7 @@
 import AboutComponent from '@/components/AboutComponent.vue';
 import CTAComponent from '@/components/CTAComponent.vue';
 import HeroComponent from '@/components/HeroComponent.vue';
-import ProjectsComponent from '@/components/ProjectsComponent.vue';
+import FeaturedProjectsComponent from '@/components/FeaturedProjectsComponent.vue';
 </script>
 
 <style lang="scss" scoped></style>

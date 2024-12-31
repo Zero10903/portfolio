@@ -1,6 +1,6 @@
 import { type iProject } from '@/interfaces/iProject';
 
-export const projectsData: iProject[] = [
+export const featuredProjectsData: iProject[] = [
 	{
 		id: 1,
 		title: 'Project Placeholder',
