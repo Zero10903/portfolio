@@ -4,4 +4,5 @@ export interface iProject {
 	image: string;
 	src: string;
 	techs: string[];
+	tags?: string[];
 }

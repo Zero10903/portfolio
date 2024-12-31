@@ -2,7 +2,7 @@
 	<div class="modal" v-if="props.isVisible" @click.self="closeModal">
 		<div class="modal__content">
 			<h2 class="modal__title">{{ props.title }}</h2>
-			<p class="modal__text">{{ props.description }}</p>
+			<slot></slot>
 			<BtnComponent class="modal__btn" size="sm" @click="closeModal">
 				Close
 			</BtnComponent>
@@ -13,7 +13,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
 	title: string;
-	description: string;
 	isVisible: boolean;
 }>();
 

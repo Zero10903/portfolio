@@ -30,6 +30,7 @@ const props = defineProps<{
 	src: string;
 	title: string;
 	techs: string[];
+	tags: string[];
 }>();
 const openDemo: () => void = () => {
 	window.open(`${props.src}`, '_blank');
@@ -45,6 +46,7 @@ const openDemo: () => void = () => {
 	@extend .card;
 
 	&__card {
+		width: 100%;
 		padding-bottom: 1rem;
 		overflow: hidden;
 		border-radius: $rounded;

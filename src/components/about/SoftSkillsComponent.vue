@@ -15,9 +15,10 @@
 			<ModalComponent
 				v-if="selectedSkill"
 				:title="selectedSkill.name"
-				:description="selectedSkill.description"
 				:isVisible="isModalVisible"
-				@close="closeModal" />
+				@close="closeModal">
+				<p>{{ selectedSkill.description }}</p>
+			</ModalComponent>
 		</transition>
 	</section>
 </template>

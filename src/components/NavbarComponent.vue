@@ -7,6 +7,13 @@
 
 			<article class="navbar__controls">
 				<IconComponent
+					class="navbar__filter"
+					@click="openModal"
+					v-if="isFilterVisible">
+					<path
+						d="M13 20v-4.586L20.414 8c.375-.375.586-.884.586-1.415V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2.585c0 .531.211 1.04.586 1.415L11 15.414V22l2-2z"></path>
+				</IconComponent>
+				<IconComponent
 					class="navbar__icon"
 					:class="{ 'navbar__icon--active': isActive == false }"
 					@click="toggleActive">
@@ -21,19 +28,34 @@
 				</IconComponent>
 			</article>
 		</header>
-		<transition>
+		<transition name="menu">
 			<nav class="navbar__list" v-if="isActive">
-				<router-link to="/" class="navbar__link">Home</router-link>
-				<router-link to="/" class="navbar__link">Projects</router-link>
+				<router-link :to="{ name: 'home' }" class="navbar__link">
+					Home
+				</router-link>
+				<router-link :to="{ name: 'projects' }" class="navbar__link">
+					Projects
+				</router-link>
 				<router-link to="/" class="navbar__link">Options</router-link>
 			</nav>
+		</transition>
+		<transition name="filter">
+			<ModalComponent
+				v-if="isModalVisible"
+				:is-visible="isModalVisible"
+				title="Filter"
+				@close="closeModal">
+				<FilterComponent />
+			</ModalComponent>
 		</transition>
 	</section>
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onBeforeUnmount, type Ref } from 'vue';
+import { ref, onMounted, onBeforeUnmount, type Ref, watch } from 'vue';
 import { RouterLink } from 'vue-router';
+import router from '@/router';
+import FilterComponent from './FilterComponent.vue';
 
 // Define the active state of the link list
 const isActive: Ref<boolean> = ref(false);
@@ -58,6 +80,31 @@ onMounted(() => {
 onBeforeUnmount(() => {
 	window.removeEventListener('resize', checkScreenWidth);
 });
+
+// Control the visibility of the filter icon
+const isFilterVisible: Ref<boolean> = ref(false);
+
+// Watch the route name to show the filter icon
+watch(
+	() => router.currentRoute.value.name,
+	(newRouteName) => {
+		isFilterVisible.value = newRouteName === 'projects';
+	},
+	{ immediate: true }
+);
+
+// Control the visibility of the filter modal
+const isModalVisible: Ref<boolean> = ref(false);
+
+// Open the filter modal
+const openModal = () => {
+	isModalVisible.value = true;
+};
+
+// Close the filter modal
+const closeModal: () => void = () => {
+	isModalVisible.value = false;
+};
 </script>
 
 <style lang="scss" scoped>
@@ -96,7 +143,11 @@ onBeforeUnmount(() => {
 	}
 	&__controls {
 		display: grid;
-		grid-template-areas: 'icon';
+		grid-template-areas: 'filter icon';
+	}
+	&__filter {
+		margin-inline: 0.5rem;
+		grid-area: filter;
 	}
 	&__icon {
 		grid-area: icon;
@@ -143,10 +194,10 @@ onBeforeUnmount(() => {
 	}
 }
 
-.v-enter-active {
+.menu-enter-active {
 	animation: slide $transition-time;
 }
-.v-leave-active {
+.menu-leave-active {
 	animation: slide $transition-time reverse;
 }
 
@@ -165,12 +216,28 @@ onBeforeUnmount(() => {
 	}
 }
 
+.filter-enter-active {
+	animation: $transition-modal toggleModal;
+}
+.filter-leave-active {
+	animation: $transition-modal toggleModal reverse;
+}
+
+@keyframes toggleModal {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
 // RESPONSIVE
 // Media query for tablet
 @media (width >= $tablet) {
 	.navbar {
 		@include layout.flex(row, nowrap, space-between, center, 1rem);
-		&__controls {
+		&__icon {
 			display: none;
 		}
 		&__list {

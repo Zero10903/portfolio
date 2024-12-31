@@ -2,7 +2,7 @@
 	<section class="projects">
 		<article class="projects__header">
 			<h2 class="projects__title">Featured projects</h2>
-			<router-link to="/">
+			<router-link :to="{ name: 'projects' }">
 				<BtnComponent size="sm">View all</BtnComponent>
 			</router-link>
 		</article>
@@ -13,7 +13,8 @@
 				:img="project.image"
 				:techs="project.techs"
 				:title="project.title"
-				:src="project.src" />
+				:src="project.src"
+				:tags="project.tags || []" />
 		</ul>
 	</section>
 </template>
