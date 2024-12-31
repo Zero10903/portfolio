@@ -31,6 +31,8 @@ const filterStore = useFilterStore();
 	&__title {
 		padding: 1rem;
 		text-align: center;
+		font-weight: 400;
+		color: $darker-color;
 	}
 	&__list {
 		width: 100%;
