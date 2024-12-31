@@ -1,6 +1,5 @@
 <template>
 	<footer class="footer">
-		<section class="footer__background"></section>
 		<section class="footer__social-media">
 			<a href="https://github.com/Zero10903" target="_blank">
 				<IconComponent>
@@ -35,7 +34,7 @@
 				</IconComponent>
 			</a>
 		</section>
-		<p class="footer__copy">{{ date }} &copy; All rights reserved</p>
+		<p class="footer__copy">Zero {{ date }} &copy; All rights reserved</p>
 	</footer>
 </template>
 
@@ -57,17 +56,11 @@ const date = ref(new Date().getFullYear());
 	@include layout.rounded($rounded-lg, (top-left, top-right));
 	background-color: $darker-color;
 
-	&__background {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-		height: 100%;
-		width: 100%;
-		background-color: rgba(0, 0, 0, 0.5);
-	}
 	&__social-media {
 		@include layout.flexCenter(row, 0.5rem);
+	}
+	&__copy {
+		text-align: center;
 	}
 }
 </style>

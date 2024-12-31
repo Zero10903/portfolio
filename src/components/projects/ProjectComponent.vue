@@ -1,7 +1,11 @@
 <template>
 	<section class="project">
 		<article class="project__card">
-			<img :src="props.img" alt="project image" class="project__img" />
+			<img
+				:src="props.img"
+				alt="project image"
+				class="project__img"
+				loading="lazy" />
 			<ul class="project__techs">
 				<li
 					class="project__tech"

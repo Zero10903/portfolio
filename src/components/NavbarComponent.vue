@@ -71,6 +71,7 @@ onBeforeUnmount(() => {
 	z-index: 5;
 
 	background-color: $darker-color;
+	@include layout.rounded($rounded-lg, (bottom-left, bottom-right));
 
 	&__header {
 		width: 100%;

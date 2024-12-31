@@ -29,7 +29,9 @@ import ProjectComponent from '@/components/projects/ProjectComponent.vue';
 @use '@/assets/sass/config' as *;
 
 .projects {
+	padding-bottom: 2rem;
 	background-color: $dark-color;
+	@include layout.rounded($rounded-lg, (bottom-left, bottom-right));
 
 	&__header {
 		padding: 2rem;

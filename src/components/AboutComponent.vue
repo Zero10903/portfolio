@@ -19,7 +19,7 @@ import TechSkillsComponent from './about/TechSkillsComponent.vue';
 .about {
 	padding: 1rem;
 	background-color: $dark-color;
-	@include layout.rounded(1rem, (top-left, top-right));
+	@include layout.rounded($rounded-lg, (top-left, top-right));
 
 	@include layout.flex(row, wrap, center, start, 1rem);
 }

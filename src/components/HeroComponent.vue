@@ -22,12 +22,14 @@
 					class="hero__image"
 					v-if="isActive"
 					src="@/assets/images/web.svg"
-					alt="Web image" />
+					alt="Web image"
+					loading="lazy" />
 				<img
 					class="hero__image"
 					v-else-if="!isActive"
 					src="@/assets/images/gaming.svg"
-					alt="Gaming image" />
+					alt="Gaming image"
+					loading="lazy" />
 			</transition>
 		</article>
 	</section>
@@ -55,6 +57,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 @use '@/assets/sass/layout';
 @use '@/assets/sass/config' as *;
+@use '@/assets/sass/components/card';
 
 .hero {
 	height: 95dvh;
@@ -64,8 +67,9 @@ onMounted(() => {
 	@include layout.flexCenter(column, 1rem);
 
 	&__content {
+		@extend .card;
+
 		padding: 0rem clamp(1rem, 5dvw, 2rem);
-		width: clamp(10rem, 90%, 20rem);
 		@include layout.flexCenter(column, 1rem);
 	}
 	&__title {

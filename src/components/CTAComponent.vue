@@ -9,7 +9,8 @@
 		<img
 			src="@/assets/images/cta.svg"
 			alt="call to action image"
-			class="cta__image" />
+			class="cta__image"
+			loading="lazy" />
 	</section>
 </template>
 
@@ -23,14 +24,6 @@
 .cta {
 	height: 95dvh;
 	@include layout.flex(row, nowrap, center, center, 1rem);
-
-	// Scroll animation
-	view-timeline-name: --darkenBackground;
-	view-timeline-axis: block;
-	animation-timeline: --darkenBackground;
-	animation-range: entry 25% cover 30%;
-	animation-fill-mode: both;
-	animation-name: darken;
 
 	&__content {
 		@extend .card;
@@ -55,15 +48,6 @@
 			display: block;
 			width: 25rem;
 		}
-	}
-}
-
-@keyframes darken {
-	0% {
-		background-color: rgba(black, 0);
-	}
-	100% {
-		background-color: rgba(black, 0.5);
 	}
 }
 </style>
