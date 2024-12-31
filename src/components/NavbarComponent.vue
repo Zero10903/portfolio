@@ -36,7 +36,7 @@
 				<router-link :to="{ name: 'projects' }" class="navbar__link">
 					Projects
 				</router-link>
-				<router-link to="/" class="navbar__link">Options</router-link>
+				<!-- <router-link to="/" class="navbar__link">Options</router-link> -->
 			</nav>
 		</transition>
 		<transition name="filter">
@@ -234,22 +234,49 @@ const closeModal: () => void = () => {
 
 // RESPONSIVE
 // Media query for tablet
+// @media (width >= $tablet) {
+// 	.navbar {
+// 		@include layout.flex(row, nowrap, space-between, center, 1rem);
+// 		&__icon {
+// 			display: none;
+// 		}
+// 		&__list {
+// 			width: fit-content;
+// 			padding: 0rem;
+// 			position: relative;
+
+// 			animation: none;
+// 			background-color: transparent;
+
+// 			@include layout.flexCenter(row, 0.5rem);
+// 		}
+// 	}
+// }
 @media (width >= $tablet) {
 	.navbar {
-		@include layout.flex(row, nowrap, space-between, center, 1rem);
-		&__icon {
-			display: none;
-		}
 		&__list {
 			width: fit-content;
-			padding: 0rem;
-			position: relative;
 
-			animation: none;
-			background-color: transparent;
-
-			@include layout.flexCenter(row, 0.5rem);
+			left: auto;
+			right: 0%;
 		}
+	}
+	.menu-enter-active {
+		animation: $transition-time fade;
+	}
+	.menu-leave-active {
+		animation: $transition-time fade reverse;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+		transform: translateY(-20%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0%);
 	}
 }
 </style>
