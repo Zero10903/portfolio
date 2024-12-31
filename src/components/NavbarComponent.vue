@@ -65,22 +65,6 @@ const toggleActive: () => void = () => {
 	isActive.value = !isActive.value;
 };
 
-// Check if the screen width is greater than 768px
-const checkScreenWidth: () => void = () => {
-	isActive.value = window.innerWidth >= 768;
-};
-
-// Add event listener to check the screen width
-onMounted(() => {
-	checkScreenWidth();
-	window.addEventListener('resize', checkScreenWidth);
-});
-
-// Remove event listener when the component is unmounted
-onBeforeUnmount(() => {
-	window.removeEventListener('resize', checkScreenWidth);
-});
-
 // Control the visibility of the filter icon
 const isFilterVisible: Ref<boolean> = ref(false);
 
@@ -232,26 +216,6 @@ const closeModal: () => void = () => {
 	}
 }
 
-// RESPONSIVE
-// Media query for tablet
-// @media (width >= $tablet) {
-// 	.navbar {
-// 		@include layout.flex(row, nowrap, space-between, center, 1rem);
-// 		&__icon {
-// 			display: none;
-// 		}
-// 		&__list {
-// 			width: fit-content;
-// 			padding: 0rem;
-// 			position: relative;
-
-// 			animation: none;
-// 			background-color: transparent;
-
-// 			@include layout.flexCenter(row, 0.5rem);
-// 		}
-// 	}
-// }
 @media (width >= $tablet) {
 	.navbar {
 		&__list {
