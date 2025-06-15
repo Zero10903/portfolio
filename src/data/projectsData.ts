@@ -15,7 +15,7 @@ export const projectsData: iProject[] = [
 		id: 2,
 		title: 'Dario\'s Barbershop',
 		image:
-			'public/images/screenshots/dariosbarbershop.png',
+			'/images/screenshots/dariosbarbershop.png',
 		src: 'https://github.com/zero10903/dariosbarbershop',
 		techs: ['Vue.js', 'TypeScript', 'Sass'],
 		tags: [projectTag.FRONTEND]
