@@ -13,7 +13,7 @@ export const featuredProjectsData: iProject[] = [
 		id: 2,
 		title: 'Dario\'s Barbershop',
 		image:
-			'src/assets/images/screenshots/dariosbarbershop.png',
+			'public/images/screenshots/dariosbarbershop.png',
 		src: 'https://github.com/zero10903/dariosbarbershop',
 		techs: ['Vue.js', 'TypeScript', 'Sass'],
 	},

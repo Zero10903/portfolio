@@ -31,7 +31,7 @@ const copyToClipboard: () => void = () => {
 
 const downloadCV: () => void = () => {
 	const link = document.createElement('a');
-	link.href = '@/assets/PDFs/alejandro_bustos_cv.pdf';
+	link.href = 'public/PDFs/alejandro_bustos_cv.pdf';
 	link.download = 'Alejandro_Bustos_CV.pdf';
 	link.click();
 };
