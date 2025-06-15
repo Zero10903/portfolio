@@ -53,6 +53,9 @@ const openDemo: () => void = () => {
 		background-color: $darker-color;
 		@include layout.flex(column, wrap, space-between, center, 1rem);
 	}
+	&__img{
+		aspect-ratio: 16/9;
+	}
 	&__techs {
 		text-transform: uppercase;
 		@include layout.flex(row, wrap, center, start, 0.2rem);

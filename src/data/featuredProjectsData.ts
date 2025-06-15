@@ -3,10 +3,18 @@ import { type iProject } from '@/interfaces/iProject';
 export const featuredProjectsData: iProject[] = [
 	{
 		id: 1,
-		title: 'Project Placeholder',
+		title: 'Somnium',
 		image:
-			'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-		src: 'https://github.com/zero10903',
-		techs: ['Vue', 'TypeScript', 'Sass'],
+			'https://raw.githubusercontent.com/Zero10903/somnium/main/Assets/Marketing/CoverArt/cover.png',
+		src: 'https://github.com/zero10903/somnium',
+		techs: ['Unity', 'C#'],
+	},
+	{
+		id: 2,
+		title: 'Dario\'s Barbershop',
+		image:
+			'src/assets/images/screenshots/dariosbarbershop.png',
+		src: 'https://github.com/zero10903/dariosbarbershop',
+		techs: ['Vue.js', 'TypeScript', 'Sass'],
 	},
 ];

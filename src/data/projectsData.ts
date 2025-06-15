@@ -4,50 +4,20 @@ import { projectTag } from '../enums/projectTag';
 export const projectsData: iProject[] = [
 	{
 		id: 1,
-		title: 'Project 1',
-		image: 'https://via.placeholder.com/150',
-		src: 'https://github.com',
-		techs: ['Vue', 'TypeScript', 'Sass'],
-		tags: [projectTag.FRONTEND],
+		title: 'Somnium',
+		image:
+			'https://raw.githubusercontent.com/Zero10903/somnium/main/Assets/Marketing/CoverArt/cover.png',
+		src: 'https://github.com/zero10903/somnium',
+		techs: ['Unity', 'C#'],
+		tags: [projectTag.GAME],
 	},
 	{
 		id: 2,
-		title: 'Project 2',
-		image: 'https://via.placeholder.com/150',
-		src: 'https://github.com',
-		techs: ['Vue', 'TypeScript'],
-		tags: [projectTag.BACKEND],
-	},
-	{
-		id: 3,
-		title: 'Project 3',
-		image: 'https://via.placeholder.com/150',
-		src: 'https://github.com',
-		techs: ['Unity', 'C#'],
-		tags: [projectTag.GAME],
-	},
-	{
-		id: 4,
-		title: 'Project 1',
-		image: 'https://via.placeholder.com/150',
-		src: 'https://github.com',
-		techs: ['Vue', 'TypeScript', 'Sass'],
-		tags: [projectTag.FRONTEND],
-	},
-	{
-		id: 5,
-		title: 'Project 2',
-		image: 'https://via.placeholder.com/150',
-		src: 'https://github.com',
-		techs: ['Vue', 'TypeScript'],
-		tags: [projectTag.BACKEND],
-	},
-	{
-		id: 6,
-		title: 'Project 3',
-		image: 'https://via.placeholder.com/150',
-		src: 'https://github.com',
-		techs: ['Unity', 'C#'],
-		tags: [projectTag.GAME],
+		title: 'Dario\'s Barbershop',
+		image:
+			'src/assets/images/screenshots/dariosbarbershop.png',
+		src: 'https://github.com/zero10903/dariosbarbershop',
+		techs: ['Vue.js', 'TypeScript', 'Sass'],
+		tags: [projectTag.FRONTEND]
 	},
 ];
